@@ -1,6 +1,6 @@
-var UI = require('ui');
+var UI = require('pebblejs/ui');
 
-this.exports = {
+module.exports = {
   show: function(errorText) {
     var card = new UI.Card({
       title: 'Error'

@@ -1,4 +1,4 @@
-this.exports = {
+module.exports = {
 
   canonicalToFahrenheit: function(canonical) {
     return canonical/10;

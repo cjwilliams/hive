@@ -1,6 +1,7 @@
-var Settings = require('settings');
-var Oauth = require('oauth');
-var MainWindow = require('main-window');
+require('pebblejs');
+var Settings = require('pebblejs/settings');
+var Oauth = require('./oauth');
+var MainWindow = require('./main-window');
 
 var defaultSettings = {
   ecobeeServerUrl: 'https://api.ecobee.com', 

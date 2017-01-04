@@ -1,8 +1,8 @@
-var UI = require('ui');
-var Vector2 = require('vector2');
-var Feature = require('platform/feature');
+var UI = require('pebblejs/ui');
+var Vector2 = require('pebblejs/lib/vector2');
+var Feature = require('pebblejs/platform/feature');
 
-this.exports = {
+module.exports = {
   holdTempHeat : function(heatHold, pos) {
     return new UI.Text({
       //position: new Vector2(118, 72),

@@ -1,13 +1,13 @@
-var UI = require('ui');
-var Vector2 = require('vector2');
-var ecobeeApi = require('ecobee-api');
-var ErrorWindow = require('error-window');
-var Accel = require('ui/accel');
-var Utils = require('utils');
-var Menu = require('menu');
-var Elements = require('elements');
-var Feature = require('platform/feature');
-var Settings = require('settings');
+var UI = require('pebblejs/ui');
+var Vector2 = require('pebblejs/lib/vector2');
+var ecobeeApi = require('./ecobee-api');
+var ErrorWindow = require('./error-window');
+var Accel = require('pebblejs/ui/accel');
+var Utils = require('./utils');
+var Menu = require('./menu');
+var Elements = require('./elements');
+var Feature = require('pebblejs/platform/feature');
+var Settings = require('pebblejs/settings');
 
 Accel.init();
 
@@ -38,7 +38,8 @@ var modeText = new UI.Text({
 var humidityIcon = new UI.Image({
   position: new Vector2(46, 44),
   size: new Vector2(20, 20),
-  image: 'images/humidity-icon.png'
+  image: 'images/humidity-icon.png',
+  compositing: 'set'
 });
 
 var humidityText = new UI.Text({
@@ -298,7 +299,7 @@ mainWindow.on('hide', function(event) {
   mainWindow.off('accelTap');
 });
 
-this.exports = {
+module.exports = {
   window: mainWindow, 
   show: function() {
     mainWindow.show();

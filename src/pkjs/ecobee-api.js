@@ -1,6 +1,6 @@
-var Settings = require('settings');
-var Oauth = require('oauth');
-var ajax = require('ajax');
+var Settings = require('pebblejs/settings');
+var Oauth = require('./oauth');
+var ajax = require('pebblejs/lib/ajax');
 
 var jsonRequest = {
     "selection": {
@@ -17,7 +17,7 @@ var jsonRequest = {
 var cache;
 var cacheExpiration;
 
-this.exports = {
+module.exports = {
   loadThermostats: function(onSuccess, onError) {
     if (Date.now()>cacheExpiration) {
       console.log('Cache expired');

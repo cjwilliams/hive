@@ -1,8 +1,8 @@
-var ajax = require('ajax');
-var Vibe = require('ui/vibe');
-var Settings = require('settings');
-var UI = require('ui');
-var ErrorWindow = require('error-window');
+var ajax = require('pebblejs/lib/ajax');
+var Vibe = require('pebblejs/ui/vibe');
+var Settings = require('pebblejs/settings');
+var UI = require('pebblejs/ui');
+var ErrorWindow = require('./error-window');
 
 var doGetAccessToken = function(asyncReq) {
     var oauthTokenExpires = Settings.data('oauthTokenExpires');
@@ -127,7 +127,7 @@ var doGetPin = function(onSuccess) {
     );
 };
 
-this.exports = {
+module.exports = {
   getAccessToken: function(asyncReq) {
     return doGetAccessToken(asyncReq);
   },

@@ -1,7 +1,7 @@
-var UI = require('ui');
-var Settings = require('settings');
-var ecobeeApi = require('ecobee-api');
-var Utils = require('utils');
+var UI = require('pebblejs/ui');
+var Settings = require('pebblejs/settings');
+var ecobeeApi = require('./ecobee-api');
+var Utils = require('./utils');
 
 var menu;
 
@@ -180,7 +180,7 @@ var showHvacModeMenu = function(thermostat){
   hvacModeMenu.show();
 };
 
-this.exports = {
+module.exports = {
   show: function(thermostatList) {   
     var thermostat;
     var selectedThermostatId = Settings.data('selectedThermostatId');
